@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gowin-synthesis-project>
+<Project>
+    <Version>beta</Version>
+    <Device id="GW5AST-138B" package="FCPBGA676A" speed="2" partNumber="GW5AST-LV138FPG676AC2/I1"/>
+    <FileList>
+        <File path="D:/Gowin/Gowin_V1.9.12_x64/IDE/ipcore/SERDES_IP/IPlib/RORALINK8B10B/data/RoraLink_8B10B_Top.v" type="verilog"/>
+        <File path="D:/Gowin/Gowin_V1.9.12_x64/IDE/ipcore/SERDES_IP/IPlib/RORALINK8B10B/data/RoraLink_8B10B_Core_encryption.v" type="verilog"/>
+    </FileList>
+    <OptionList>
+        <Option type="disable_insert_pad" value="1"/>
+        <Option type="enable_dsrm" value="0"/>
+        <Option type="include_path" value="D:/Gowin/Gowin_V1.9.12_x64/IDE/ipcore/SERDES_IP/IPlib/RORALINK8B10B/data"/>
+        <Option type="include_path" value="E:/ymj_project/serdes/GW138K_sfp_debug/fpga_project/src/serdes/roralink_8b10b/temp/roralink8b10b"/>
+        <Option type="output_file" value="roralink_8b10b.vg"/>
+        <Option type="output_template" value="roralink_8b10b_tmp.v"/>
+        <Option type="ram_balance" value="1"/>
+        <Option type="ram_rw_check" value="1"/>
+        <Option type="top_module" value="RoraLink_8B10B_Top"/>
+        <Option type="vcc" value="0.9"/>
+        <Option type="vccx" value="1.8"/>
+        <Option type="verilog_language" value="sysv-2017"/>
+    </OptionList>
+</Project>

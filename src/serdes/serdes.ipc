@@ -1,0 +1,67 @@
+[General]
+ipc_version=4
+target_device=gw5ast138b-006
+type=Serdes
+version=1.2
+
+[Config]
+LANG=0
+Q0_BIAS=7
+Synthesis_tool=GowinSynthesis
+file=serdes
+module=SerDes_Top
+global_reset_enable=false
+Q1_BIAS=7
+
+[RoraLink%208B10B%3Aroralink_8b10b%3ARoraLink_8B10B_Top]
+ATT=7
+BOOST=9
+Back_Channel=Timer
+CRC=false
+ChannelSel0=Q1 Lane3
+ChannelSel1=Q0 Lane1
+ChannelSel2=Q0 Lane2
+ChannelSel3=Q0 Lane3
+ChannelSel4=Q1 Lane0
+ChannelSel5=Q1 Lane1
+ChannelSel6=Q1 Lane2
+ChannelSel7=Q1 Lane3
+DIFFERENTIAL_SWING=900mV
+DRP_Ports=false
+Data_Width_Per_Lane=4
+Dataflow_Mode=Duplex
+Equalization_Mode=Auto
+FFEMODE=Auto
+FFE_C0=40
+FFE_C1=0
+FFE_CM=0
+Flow_Control=None
+Interface=Streaming
+LANG=0
+Line_Rate=3.125
+Little_Endian_Support=true
+Loopback_Mode=OFF
+Number_of_Lanes=1
+PLL_Selection=CPLL
+Reference_CLK_Frequency=125.000
+Reference_CLK_Source=Q1 REFCLK0
+SD_THRESHOLD=100mV
+Scrambler_Descrambler=true
+Synthesis_tool=GowinSynthesis
+file=roralink_8b10b
+ifChangedAllOfBias=true
+module=RoraLink_8B10B_Top
+recordlanes=Q1 Lane3
+target_device=gw5ast138b-006
+type=roralink8b10b
+version=1.0
+CTC_Selection=SerDes
+Clock_Source=lane
+Master_Channel_Selection=Q1 Lane3
+Read_Start_Depth_Cb=8
+Read_Start_Depth_Rcc=8
+Sequence_Period=12
+
+[All_access]
+Q1_LANE3_RX=Q1_LANE3_RX -> Q1_MUX0 -> Q1_REFCLK0
+Q1_LANE3_TX=Q1_LANE3_TX -> Q1_CPLL3 -> Q1_MUX0 -> Q1_REFCLK0

@@ -1,0 +1,134 @@
+# =========================
+# General temporary files
+# =========================
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+*.autosave
+
+# =========================
+# Editor / OS files
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# VSCode
+.vscode/
+
+# JetBrains
+.idea/
+
+# =========================
+# User-specific project files
+# 一般不建议提交个人本地配置
+# =========================
+*.user
+*.users
+*.userprefs
+
+# 你之前工程里出现过的这类文件
+*.gprj.user
+
+# =========================
+# FPGA tool generated reports / database / cache
+# =========================
+*.rpt
+*.report
+*.xml.tmp
+*.html.tmp
+*.cache
+*.db
+*.jou
+*.str
+*.cmd
+*.tcl.bak
+
+# =========================
+# Generated netlist / bitstream / programming outputs
+# 这些是否忽略，看你团队习惯
+# 通常建议忽略，由发布版本单独管理
+# =========================
+*.fs
+*.bin
+*.bit
+*.jed
+*.svf
+*.pof
+*.sof
+*.hex
+*.mcs
+
+# 如果你希望保留最终下载文件，可以把上面这一段删掉
+
+# =========================
+# Simulation generated files
+# =========================
+*.vcd
+*.wlf
+*.wdb
+*.fst
+*.ghw
+*.pb
+transcript
+modelsim.ini
+vsim.wlf
+work/
+questa_lib/
+simv/
+csrc/
+DVEfiles/
+INCA_libs/
+xcelium.d/
+nWaveLog/
+
+# =========================
+# Synthesis / implementation intermediate files
+# =========================
+*.ngc
+*.ngo
+*.edf
+*.edif
+*.vm
+*.ncd
+*.dcp
+*.xdc.backup
+
+# =========================
+# Gowin / EDA generated special files
+# 按你现在看到的情况，rao 这类建议忽略
+# =========================
+*.rao
+
+# 如果后面还发现某些明显是自动生成的文件，也可以继续补进来
+
+# =========================
+# Build output folders
+# 常见输出目录名，按实际工程情况保留/增删
+# =========================
+/build/
+/Build/
+/impl/
+/impls/
+/output/
+/out/
+/bin/
+/obj/
+/debug/
+/release/
+/run/
+/runs/
+/temp/
+/tmp/
+/cache/
+
+# =========================
+# Archive packages
+# =========================
+*.zip
+*.7z
+*.rar

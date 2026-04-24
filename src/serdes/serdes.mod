@@ -1,0 +1,27 @@
+-type SERDES
+-path E:/ymj_project/serdes/GW138K_sfp_debug/fpga_project/src/serdes/
+-file_type vlg
+-file_name serdes
+-mod_name SerDes_Top
+-series GW5AST
+-device GW5AST-138
+-device_version B
+-package FCPBGA676A
+-part_number GW5AST-LV138FPG676AC2/I1
+
+
+-protocol_module_name0 RoraLink_8B10B_Top
+-RoraLink_8B10B_Topprotocol_module_type roralink8b10b
+-RoraLink_8B10B_TopReferenceClockSource Q1REFCLK0
+-RoraLink_8B10B_TopPLLSource CPLL
+-RoraLink_8B10B_TopDataWidthPerLane 4
+-RoraLink_8B10B_TopNumberoflanes 1
+-RoraLink_8B10B_TopDataFlowMode Duplex
+-RoraLink_8B10B_TopInterface Streaming
+-RoraLink_8B10B_TopFlowControl None
+-RoraLink_8B10B_TopBackChannel Timer
+-RoraLink_8B10B_TopLittleEndianSupport true
+-RoraLink_8B10B_TopEnableDRP false
+-RoraLink_8B10B_TopDRPPorts false
+-RoraLink_8B10B_TopQ1Lane3 true
+-RoraLink_8B10B_TopChannel0Selection Q1Lane3
