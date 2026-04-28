@@ -1,8 +1,9 @@
 `define DUPLEX_EN
-`define STREAMING_EN
+`define FRAMING_EN
 `define NONE_EN
 `define SCRAMBLER_EN
 `define LITTLE_ENDIAN_EN
+`define CRC_EN
 `define LANE_WIDTH 1
 `define LANE_DATA_WIDTH 32
 `define QUAD0_SEL 0

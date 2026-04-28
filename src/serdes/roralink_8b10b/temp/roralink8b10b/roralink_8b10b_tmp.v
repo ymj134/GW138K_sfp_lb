@@ -1,11 +1,11 @@
-//Copyright (C)2014-2025 Gowin Semiconductor Corporation.
+//Copyright (C)2014-2026 Gowin Semiconductor Corporation.
 //All rights reserved.
 //File Title: Template file for instantiation
-//Tool Version: V1.9.12 (64-bit)
+//Tool Version: V1.9.12.02_SP2 (64-bit)
 //Part Number: GW5AST-LV138FPG676AC2/I1
 //Device: GW5AST-138
 //Device Version: B
-//Created Time: Wed Apr 15 15:52:09 2026
+//Created Time: Tue Apr 28 16:12:20 2026
 
 //Change the instance name and port connections to the signal names
 //--------Copy here to design--------
@@ -18,12 +18,19 @@
 		.link_reset_o(link_reset_o), //output link_reset_o
 		.sys_reset_o(sys_reset_o), //output sys_reset_o
 		.user_tx_data_i(user_tx_data_i), //input [31:0] user_tx_data_i
+		.user_tx_strb_i(user_tx_strb_i), //input [3:0] user_tx_strb_i
 		.user_tx_valid_i(user_tx_valid_i), //input user_tx_valid_i
+		.user_tx_last_i(user_tx_last_i), //input user_tx_last_i
 		.user_tx_ready_o(user_tx_ready_o), //output user_tx_ready_o
 		.user_rx_data_o(user_rx_data_o), //output [31:0] user_rx_data_o
+		.user_rx_strb_o(user_rx_strb_o), //output [3:0] user_rx_strb_o
 		.user_rx_valid_o(user_rx_valid_o), //output user_rx_valid_o
+		.user_rx_last_o(user_rx_last_o), //output user_rx_last_o
+		.crc_pass_fail_n_o(crc_pass_fail_n_o), //output crc_pass_fail_n_o
+		.crc_valid_o(crc_valid_o), //output crc_valid_o
 		.hard_err_o(hard_err_o), //output hard_err_o
 		.soft_err_o(soft_err_o), //output soft_err_o
+		.frame_err_o(frame_err_o), //output frame_err_o
 		.channel_up_o(channel_up_o), //output channel_up_o
 		.lane_up_o(lane_up_o), //output [0:0] lane_up_o
 		.gt_reset_i(gt_reset_i), //input gt_reset_i

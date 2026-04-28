@@ -132,3 +132,8 @@ nWaveLog/
 *.zip
 *.7z
 *.rar
+
+
+fpga_project/impl/
+impl/
+*.pr

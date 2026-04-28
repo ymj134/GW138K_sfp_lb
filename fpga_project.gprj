@@ -5,6 +5,9 @@
     <Version>5</Version>
     <Device name="GW5AST-138C" pn="GW5AST-LV138FPG676AC2/I1">gw5ast138c-002</Device>
     <FileList>
+        <File path="src/gowin_pll/gowin_pll.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin_pll/gowin_pll_mod.v" type="file.verilog" enable="1"/>
+        <File path="src/pll_init.v" type="file.verilog" enable="1"/>
         <File path="src/serdes/roralink_8b10b/roralink_8b10b.v" type="file.verilog" enable="1"/>
         <File path="src/serdes/serdes.v" type="file.verilog" enable="1"/>
         <File path="src/top.v" type="file.verilog" enable="1"/>
