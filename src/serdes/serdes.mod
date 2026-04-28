@@ -17,7 +17,7 @@
 -RoraLink_8B10B_TopPLLSource CPLL
 -RoraLink_8B10B_TopDataWidthPerLane 4
 -RoraLink_8B10B_TopNumberoflanes 1
--RoraLink_8B10B_TopDataFlowMode Duplex
+-RoraLink_8B10B_TopDataFlowMode RX-onlySimplex
 -RoraLink_8B10B_TopInterface Framing
 -RoraLink_8B10B_TopFlowControl None
 -RoraLink_8B10B_TopBackChannel Timer

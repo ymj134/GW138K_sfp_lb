@@ -29,7 +29,7 @@ ChannelSel7=Q1 Lane3
 DIFFERENTIAL_SWING=900mV
 DRP_Ports=false
 Data_Width_Per_Lane=4
-Dataflow_Mode=Duplex
+Dataflow_Mode=RX-only Simplex
 Equalization_Mode=Auto
 FFEMODE=Auto
 FFE_C0=40
@@ -64,4 +64,3 @@ Sequence_Period=12
 
 [All_access]
 Q1_LANE3_RX=Q1_LANE3_RX -> Q1_MUX0 -> Q1_REFCLK0
-Q1_LANE3_TX=Q1_LANE3_TX -> Q1_CPLL3 -> Q1_MUX0 -> Q1_REFCLK0

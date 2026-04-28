@@ -1,6 +1,7 @@
-`define DUPLEX_EN
+`define SIMPLEX_RX_EN
 `define FRAMING_EN
 `define NONE_EN
+`define TIMER_EN
 `define SCRAMBLER_EN
 `define LITTLE_ENDIAN_EN
 `define CRC_EN

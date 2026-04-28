@@ -76,7 +76,7 @@ wire [LANE_WIDTH-1:0] gt_rx_k_lock;
 wire link_reset;
 wire sys_reset;
 
-assign sys_clk = gt_pcs_rx_clk[0];
+assign sys_clk = gt_pcs_tx_clk[0];
 
 assign gt_reset        = 1'b0;
 assign gt_pcs_tx_reset = 1'b0;
@@ -303,57 +303,57 @@ end
 // Recommended ILA clock: sys_clk / gt_pcs_tx_clk[0]
 // Recommended trigger  : ila138_user_rx_valid == 1, or any *_err_seen == 1
 // -----------------------------------------------------------------------------
-wire [31:0] ila138_top_version          = TOP_VERSION;
-wire        ila138_cfg_pll_lock         = cfg_pll_lock;
-wire        ila138_cfg_rst              = cfg_rst;
-wire        ila138_gt_pll_ok            = gt_pll_ok;
-wire        ila138_sys_rst              = sys_rst;
-wire        ila138_sys_reset            = sys_reset;
-wire        ila138_link_reset           = link_reset;
-wire        ila138_channel_up           = channel_up;
-wire        ila138_channel_up_1d        = channel_up_1d;
-wire [0:0]  ila138_lane_up              = lane_up;
-wire [0:0]  ila138_gt_rx_pma_lock       = gt_rx_pma_lock;
-wire [0:0]  ila138_gt_rx_k_lock         = gt_rx_k_lock;
-wire [0:0]  ila138_gt_rx_align_link     = gt_rx_align_link;
-wire [31:0] ila138_user_rx_data         = user_rx_data;
-wire [3:0]  ila138_user_rx_strb         = user_rx_strb;
-wire        ila138_user_rx_valid        = user_rx_valid;
-wire        ila138_user_rx_last         = user_rx_last;
-wire [7:0]  ila138_rx_beat_cnt          = rx_beat_cnt;
-wire [31:0] ila138_rx_expected_word     = rx_expected_word;
-wire [31:0] ila138_rx_last_data         = rx_last_data;
-wire [31:0] ila138_rx_expected_d        = rx_expected_d;
-wire        ila138_rx_aligned           = rx_aligned;
-wire        ila138_rx_payload_mismatch  = rx_payload_mismatch;
-wire        ila138_rx_last_expected     = rx_last_expected;
-wire        ila138_rx_last_mismatch     = rx_last_mismatch;
-wire [31:0] ila138_rx_first_bad_data    = rx_first_bad_data;
-wire [31:0] ila138_rx_first_bad_expecte = rx_first_bad_expected;
-wire [7:0]  ila138_rx_first_bad_beat    = rx_first_bad_beat;
-wire [31:0] ila138_rx_valid_cnt         = rx_valid_cnt;
-wire [31:0] ila138_rx_frame_cnt         = rx_frame_cnt;
-wire [15:0] ila138_rx_good_frame_cnt    = rx_good_frame_cnt;
-wire        ila138_rx_seen_valid        = rx_seen_valid;
-wire        ila138_rx_seen_last         = rx_seen_last;
-wire        ila138_rx_activity_toggle   = rx_activity_toggle;
-wire        ila138_crc_valid            = crc_valid;
-wire        ila138_crc_pass_fail_n      = crc_pass_fail_n;
-wire        ila138_hard_err             = hard_err;
-wire        ila138_soft_err             = soft_err;
-wire        ila138_frame_err            = frame_err;
-wire        ila138_payload_err_seen     = payload_err_seen;
-wire        ila138_last_err_seen        = last_err_seen;
-wire        ila138_hard_err_seen        = hard_err_seen;
-wire        ila138_soft_err_seen        = soft_err_seen;
-wire        ila138_frame_err_seen       = frame_err_seen;
-wire        ila138_crc_err_seen         = crc_err_seen;
-wire        ila138_any_err_seen         = any_err_seen;
-wire        ila138_any_err_now          = any_err_now;
-wire        ila138_test_pass            = test_pass;
-wire [31:0] ila138_user_tx_data         = user_tx_data;
-wire        ila138_user_tx_valid        = user_tx_valid;
-wire        ila138_user_tx_ready        = user_tx_ready;
+wire [31:0] ila138_top_version          /* synthesis syn_keep=1 */ = TOP_VERSION;
+wire        ila138_cfg_pll_lock         /* synthesis syn_keep=1 */ = cfg_pll_lock;
+wire        ila138_cfg_rst              /* synthesis syn_keep=1 */ = cfg_rst;
+wire        ila138_gt_pll_ok            /* synthesis syn_keep=1 */ = gt_pll_ok;
+wire        ila138_sys_rst              /* synthesis syn_keep=1 */ = sys_rst;
+wire        ila138_sys_reset            /* synthesis syn_keep=1 */ = sys_reset;
+wire        ila138_link_reset           /* synthesis syn_keep=1 */ = link_reset;
+wire        ila138_channel_up           /* synthesis syn_keep=1 */ = channel_up;
+wire        ila138_channel_up_1d        /* synthesis syn_keep=1 */ = channel_up_1d;
+wire [0:0]  ila138_lane_up              /* synthesis syn_keep=1 */ = lane_up;
+wire [0:0]  ila138_gt_rx_pma_lock       /* synthesis syn_keep=1 */ = gt_rx_pma_lock;
+wire [0:0]  ila138_gt_rx_k_lock         /* synthesis syn_keep=1 */ = gt_rx_k_lock;
+wire [0:0]  ila138_gt_rx_align_link     /* synthesis syn_keep=1 */ = gt_rx_align_link;
+wire [31:0] ila138_user_rx_data         /* synthesis syn_keep=1 */ = user_rx_data;
+wire [3:0]  ila138_user_rx_strb         /* synthesis syn_keep=1 */ = user_rx_strb;
+wire        ila138_user_rx_valid        /* synthesis syn_keep=1 */ = user_rx_valid;
+wire        ila138_user_rx_last         /* synthesis syn_keep=1 */ = user_rx_last;
+wire [7:0]  ila138_rx_beat_cnt          /* synthesis syn_keep=1 */ = rx_beat_cnt;
+wire [31:0] ila138_rx_expected_word     /* synthesis syn_keep=1 */ = rx_expected_word;
+wire [31:0] ila138_rx_last_data         /* synthesis syn_keep=1 */ = rx_last_data;
+wire [31:0] ila138_rx_expected_d        /* synthesis syn_keep=1 */ = rx_expected_d;
+wire        ila138_rx_aligned           /* synthesis syn_keep=1 */ = rx_aligned;
+wire        ila138_rx_payload_mismatch  /* synthesis syn_keep=1 */ = rx_payload_mismatch;
+wire        ila138_rx_last_expected     /* synthesis syn_keep=1 */ = rx_last_expected;
+wire        ila138_rx_last_mismatch     /* synthesis syn_keep=1 */ = rx_last_mismatch;
+wire [31:0] ila138_rx_first_bad_data    /* synthesis syn_keep=1 */ = rx_first_bad_data;
+wire [31:0] ila138_rx_first_bad_expected/* synthesis syn_keep=1 */ = rx_first_bad_expected;
+wire [7:0]  ila138_rx_first_bad_beat    /* synthesis syn_keep=1 */ = rx_first_bad_beat;
+wire [31:0] ila138_rx_valid_cnt         /* synthesis syn_keep=1 */ = rx_valid_cnt;
+wire [31:0] ila138_rx_frame_cnt         /* synthesis syn_keep=1 */ = rx_frame_cnt;
+wire [15:0] ila138_rx_good_frame_cnt    /* synthesis syn_keep=1 */ = rx_good_frame_cnt;
+wire        ila138_rx_seen_valid        /* synthesis syn_keep=1 */ = rx_seen_valid;
+wire        ila138_rx_seen_last         /* synthesis syn_keep=1 */ = rx_seen_last;
+wire        ila138_rx_activity_toggle   /* synthesis syn_keep=1 */ = rx_activity_toggle;
+wire        ila138_crc_valid            /* synthesis syn_keep=1 */ = crc_valid;
+wire        ila138_crc_pass_fail_n      /* synthesis syn_keep=1 */ = crc_pass_fail_n;
+wire        ila138_hard_err             /* synthesis syn_keep=1 */ = hard_err;
+wire        ila138_soft_err             /* synthesis syn_keep=1 */ = soft_err;
+wire        ila138_frame_err            /* synthesis syn_keep=1 */ = frame_err;
+wire        ila138_payload_err_seen     /* synthesis syn_keep=1 */ = payload_err_seen;
+wire        ila138_last_err_seen        /* synthesis syn_keep=1 */ = last_err_seen;
+wire        ila138_hard_err_seen        /* synthesis syn_keep=1 */ = hard_err_seen;
+wire        ila138_soft_err_seen        /* synthesis syn_keep=1 */ = soft_err_seen;
+wire        ila138_frame_err_seen       /* synthesis syn_keep=1 */ = frame_err_seen;
+wire        ila138_crc_err_seen         /* synthesis syn_keep=1 */ = crc_err_seen;
+wire        ila138_any_err_seen         /* synthesis syn_keep=1 */ = any_err_seen;
+wire        ila138_any_err_now          /* synthesis syn_keep=1 */ = any_err_now;
+wire        ila138_test_pass            /* synthesis syn_keep=1 */ = test_pass;
+wire [31:0] ila138_user_tx_data         /* synthesis syn_keep=1 */ = user_tx_data;
+wire        ila138_user_tx_valid        /* synthesis syn_keep=1 */ = user_tx_valid;
+wire        ila138_user_tx_ready        /* synthesis syn_keep=1 */ = user_tx_ready;
 
 // -----------------------------------------------------------------------------
 // SerDes / RoraLink 8B10B IP
@@ -367,11 +367,11 @@ SerDes_Top u_SerDes_Top
     .RoraLink_8B10B_Top_link_reset_o      (link_reset),
     .RoraLink_8B10B_Top_sys_reset_o       (sys_reset),
 
-    // .RoraLink_8B10B_Top_user_tx_data_i    (user_tx_data),
-    // .RoraLink_8B10B_Top_user_tx_valid_i   (user_tx_valid),
-    // .RoraLink_8B10B_Top_user_tx_ready_o   (user_tx_ready),
-    // .RoraLink_8B10B_Top_user_tx_strb_i    (user_tx_strb),
-    // .RoraLink_8B10B_Top_user_tx_last_i    (user_tx_last),
+    .RoraLink_8B10B_Top_user_tx_data_i    (user_tx_data),
+    .RoraLink_8B10B_Top_user_tx_valid_i   (user_tx_valid),
+    .RoraLink_8B10B_Top_user_tx_ready_o   (user_tx_ready),
+    .RoraLink_8B10B_Top_user_tx_strb_i    (user_tx_strb),
+    .RoraLink_8B10B_Top_user_tx_last_i    (user_tx_last),
 
     .RoraLink_8B10B_Top_user_rx_data_o    (user_rx_data),
     .RoraLink_8B10B_Top_user_rx_valid_o   (user_rx_valid),
@@ -386,8 +386,8 @@ SerDes_Top u_SerDes_Top
     .RoraLink_8B10B_Top_channel_up_o      (channel_up),
     .RoraLink_8B10B_Top_lane_up_o         (lane_up),
 
-//    .RoraLink_8B10B_Top_gt_pcs_tx_reset_i (gt_pcs_tx_reset),
-//    .RoraLink_8B10B_Top_gt_pcs_tx_clk_o   (gt_pcs_tx_clk),
+    .RoraLink_8B10B_Top_gt_pcs_tx_reset_i (gt_pcs_tx_reset),
+    .RoraLink_8B10B_Top_gt_pcs_tx_clk_o   (gt_pcs_tx_clk),
     .RoraLink_8B10B_Top_gt_pcs_rx_reset_i (gt_pcs_rx_reset),
     .RoraLink_8B10B_Top_gt_rx_align_link_o(gt_rx_align_link),
     .RoraLink_8B10B_Top_gt_rx_pma_lock_o  (gt_rx_pma_lock),

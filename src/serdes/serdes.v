@@ -6,13 +6,12 @@
 //Part Number: GW5AST-LV138FPG676AC2/I1
 //Device: GW5AST-138
 //Device Version: B
-//Created Time: Tue Apr 28 16:12:21 2026
+//Created Time: Tue Apr 28 17:06:06 2026
 
-module SerDes_Top (RoraLink_8B10B_Top_link_reset_o, RoraLink_8B10B_Top_sys_reset_o, RoraLink_8B10B_Top_user_tx_ready_o, RoraLink_8B10B_Top_user_rx_data_o, RoraLink_8B10B_Top_user_rx_strb_o, RoraLink_8B10B_Top_user_rx_valid_o, RoraLink_8B10B_Top_user_rx_last_o, RoraLink_8B10B_Top_crc_pass_fail_n_o, RoraLink_8B10B_Top_crc_valid_o, RoraLink_8B10B_Top_hard_err_o, RoraLink_8B10B_Top_soft_err_o, RoraLink_8B10B_Top_frame_err_o, RoraLink_8B10B_Top_channel_up_o, RoraLink_8B10B_Top_lane_up_o, RoraLink_8B10B_Top_gt_pcs_tx_clk_o, RoraLink_8B10B_Top_gt_pcs_rx_clk_o, RoraLink_8B10B_Top_gt_pll_lock_o, RoraLink_8B10B_Top_gt_rx_align_link_o, RoraLink_8B10B_Top_gt_rx_pma_lock_o, RoraLink_8B10B_Top_gt_rx_k_lock_o, RoraLink_8B10B_Top_user_clk_i, RoraLink_8B10B_Top_init_clk_i, RoraLink_8B10B_Top_reset_i, RoraLink_8B10B_Top_user_pll_locked_i, RoraLink_8B10B_Top_user_tx_data_i, RoraLink_8B10B_Top_user_tx_strb_i, RoraLink_8B10B_Top_user_tx_valid_i, RoraLink_8B10B_Top_user_tx_last_i, RoraLink_8B10B_Top_gt_reset_i, RoraLink_8B10B_Top_gt_pcs_tx_reset_i, RoraLink_8B10B_Top_gt_pcs_rx_reset_i);
+module SerDes_Top (RoraLink_8B10B_Top_link_reset_o, RoraLink_8B10B_Top_sys_reset_o, RoraLink_8B10B_Top_user_rx_data_o, RoraLink_8B10B_Top_user_rx_strb_o, RoraLink_8B10B_Top_user_rx_valid_o, RoraLink_8B10B_Top_user_rx_last_o, RoraLink_8B10B_Top_crc_pass_fail_n_o, RoraLink_8B10B_Top_crc_valid_o, RoraLink_8B10B_Top_hard_err_o, RoraLink_8B10B_Top_soft_err_o, RoraLink_8B10B_Top_frame_err_o, RoraLink_8B10B_Top_channel_up_o, RoraLink_8B10B_Top_lane_up_o, RoraLink_8B10B_Top_gt_pcs_rx_clk_o, RoraLink_8B10B_Top_gt_pll_lock_o, RoraLink_8B10B_Top_gt_rx_align_link_o, RoraLink_8B10B_Top_gt_rx_pma_lock_o, RoraLink_8B10B_Top_gt_rx_k_lock_o, RoraLink_8B10B_Top_user_clk_i, RoraLink_8B10B_Top_init_clk_i, RoraLink_8B10B_Top_reset_i, RoraLink_8B10B_Top_user_pll_locked_i, RoraLink_8B10B_Top_gt_reset_i, RoraLink_8B10B_Top_gt_pcs_rx_reset_i);
 
 output RoraLink_8B10B_Top_link_reset_o;
 output RoraLink_8B10B_Top_sys_reset_o;
-output RoraLink_8B10B_Top_user_tx_ready_o;
 output [31:0] RoraLink_8B10B_Top_user_rx_data_o;
 output [3:0] RoraLink_8B10B_Top_user_rx_strb_o;
 output RoraLink_8B10B_Top_user_rx_valid_o;
@@ -24,7 +23,6 @@ output RoraLink_8B10B_Top_soft_err_o;
 output RoraLink_8B10B_Top_frame_err_o;
 output RoraLink_8B10B_Top_channel_up_o;
 output RoraLink_8B10B_Top_lane_up_o;
-output RoraLink_8B10B_Top_gt_pcs_tx_clk_o;
 output RoraLink_8B10B_Top_gt_pcs_rx_clk_o;
 output RoraLink_8B10B_Top_gt_pll_lock_o;
 output RoraLink_8B10B_Top_gt_rx_align_link_o;
@@ -34,12 +32,7 @@ input RoraLink_8B10B_Top_user_clk_i;
 input RoraLink_8B10B_Top_init_clk_i;
 input RoraLink_8B10B_Top_reset_i;
 input RoraLink_8B10B_Top_user_pll_locked_i;
-input [31:0] RoraLink_8B10B_Top_user_tx_data_i;
-input [3:0] RoraLink_8B10B_Top_user_tx_strb_i;
-input RoraLink_8B10B_Top_user_tx_valid_i;
-input RoraLink_8B10B_Top_user_tx_last_i;
 input RoraLink_8B10B_Top_gt_reset_i;
-input RoraLink_8B10B_Top_gt_pcs_tx_reset_i;
 input RoraLink_8B10B_Top_gt_pcs_rx_reset_i;
 
 wire q1_fabric_ln3_rstn_i;
@@ -454,7 +447,6 @@ defparam gtr12_quad_inst1.POSITION = "Q1";
 RoraLink_8B10B_Top RoraLink_8B10B_Top_inst (
     .link_reset_o(RoraLink_8B10B_Top_link_reset_o),
     .sys_reset_o(RoraLink_8B10B_Top_sys_reset_o),
-    .user_tx_ready_o(RoraLink_8B10B_Top_user_tx_ready_o),
     .user_rx_data_o(RoraLink_8B10B_Top_user_rx_data_o[31:0]),
     .user_rx_strb_o(RoraLink_8B10B_Top_user_rx_strb_o[3:0]),
     .user_rx_valid_o(RoraLink_8B10B_Top_user_rx_valid_o),
@@ -466,16 +458,11 @@ RoraLink_8B10B_Top RoraLink_8B10B_Top_inst (
     .frame_err_o(RoraLink_8B10B_Top_frame_err_o),
     .channel_up_o(RoraLink_8B10B_Top_channel_up_o),
     .lane_up_o(RoraLink_8B10B_Top_lane_up_o),
-    .gt_pcs_tx_clk_o(RoraLink_8B10B_Top_gt_pcs_tx_clk_o),
     .gt_pcs_rx_clk_o(RoraLink_8B10B_Top_gt_pcs_rx_clk_o),
     .gt_pll_lock_o(RoraLink_8B10B_Top_gt_pll_lock_o),
     .gt_rx_align_link_o(RoraLink_8B10B_Top_gt_rx_align_link_o),
     .gt_rx_pma_lock_o(RoraLink_8B10B_Top_gt_rx_pma_lock_o),
     .gt_rx_k_lock_o(RoraLink_8B10B_Top_gt_rx_k_lock_o),
-    .serdes_pcs_tx_rst_o(q1_lane3_pcs_tx_rst),
-    .serdes_lanex_fabric_tx_clk_o(q1_lane3_fabric_tx_clk),
-    .serdes_lnx_tx_vld_o(q1_fabric_ln3_tx_vld_in),
-    .serdes_lnx_txdata_o(q1_fabric_ln3_txdata_i[79:0]),
     .serdes_pcs_rx_rst_o(q1_lane3_pcs_rx_rst),
     .serdes_lanex_fabric_rx_clk_o(q1_lane3_fabric_rx_clk),
     .serdes_lanex_rx_if_fifo_rden_o(q1_lane3_rx_if_fifo_rden),
@@ -487,15 +474,8 @@ RoraLink_8B10B_Top RoraLink_8B10B_Top_inst (
     .init_clk_i(RoraLink_8B10B_Top_init_clk_i),
     .reset_i(RoraLink_8B10B_Top_reset_i),
     .user_pll_locked_i(RoraLink_8B10B_Top_user_pll_locked_i),
-    .user_tx_data_i(RoraLink_8B10B_Top_user_tx_data_i[31:0]),
-    .user_tx_strb_i(RoraLink_8B10B_Top_user_tx_strb_i[3:0]),
-    .user_tx_valid_i(RoraLink_8B10B_Top_user_tx_valid_i),
-    .user_tx_last_i(RoraLink_8B10B_Top_user_tx_last_i),
     .gt_reset_i(RoraLink_8B10B_Top_gt_reset_i),
-    .gt_pcs_tx_reset_i(RoraLink_8B10B_Top_gt_pcs_tx_reset_i),
     .gt_pcs_rx_reset_i(RoraLink_8B10B_Top_gt_pcs_rx_reset_i),
-    .serdes_lanex_tx_if_fifo_afull_i(q1_lane3_tx_if_fifo_afull),
-    .serdes_tx_if_fifo_wrusewd_i(q1_lane3_tx_if_fifo_wrusewd[4:0]),
     .serdes_lanex_align_link_i(q1_lane3_align_link),
     .serdes_lanex_k_lock_i(q1_lane3_k_lock),
     .serdes_lnx_pma_rx_lock_i(q1_fabric_ln3_pma_rx_lock_o),
