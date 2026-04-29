@@ -1,4 +1,4 @@
-`define SIMPLEX_RX_EN
+`define SIMPLEX_TX_EN
 `define FRAMING_EN
 `define NONE_EN
 `define TIMER_EN
